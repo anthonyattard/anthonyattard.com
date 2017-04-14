@@ -291,6 +291,14 @@ footer {
     }
 }
 
+.social-header {
+    color: #fff;
+
+        &:hover {
+            color: #1A222C;
+        }
+}
+
 .btn-rounded-white {
     display: inline-block;
     color: #fff;
