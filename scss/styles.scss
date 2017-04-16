@@ -294,6 +294,7 @@ footer {
 .social-header {
     color: #fff;
     padding: 10px;
+    font-size: 3em;
 
         &:hover {
             color: #1A222C;
@@ -891,7 +892,12 @@ footer {
         }
 
         a {
-            padding: 10px 20px;
+            padding: 10px 10px;
+        }
+
+        .social-header {
+            font-size: 2em;
+            padding: 0px;
         }
     }
 
