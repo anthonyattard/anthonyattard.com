@@ -7,9 +7,17 @@ RewriteRule ^(.*)$ http://anthonyattard.com/$1 [L,R=301]
 RewriteRule ^resume$ / [R=301,L]
 RewriteRule ^(.*)/resume$ / [R=301,L]
 
+#301 for old resume url
+RewriteRule ^resume/$ / [R=301,L]
+RewriteRule ^(.*)/resume/$ / [R=301,L]
+
 #301 for old contact url
 RewriteRule ^contact$ / [R=301,L]
 RewriteRule ^(.*)/contact$ / [R=301,L]
+
+#301 for old contact url
+RewriteRule ^contact/$ / [R=301,L]
+RewriteRule ^(.*)/contact/$ / [R=301,L]
 
 #Custom 404 error page
 ErrorDocument 404 /404.html
