@@ -546,6 +546,12 @@ footer {
         font-size: 0.9em;
         margin: 0;
     }
+
+    li {
+        color: $text;
+        font-size: 0.9em;
+        margin: 0;
+    }
 }
 
 .vtimeline-point {
@@ -690,9 +696,9 @@ footer {
     ul {
         text-align: left;
     }
-    
+
     li {
-        color: #74808a;
+        color: $text;
     }
 }
 
