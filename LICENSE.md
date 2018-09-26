@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2017 Ryan Fitzgerald
+Copyright (c) 2017 Anthony Attard
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
