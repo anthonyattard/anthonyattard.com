@@ -12,6 +12,28 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('162dFHYXUyHpr7pEa');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_fhghkdd', 'template_6igouc8', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -59,11 +81,11 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Anthony Attard</h1>
-            <h2>Software Developer &amp; Entrepreneur</h2>
+            <h2>AI Business Consultant &amp; Entrepreneur</h2>
             <a href="https://twitter.com/anthonyaattard" target="_blank"><i class="social-header fa fa-twitter" aria-hidden="true"></i></a>
             <a href="https://github.com/anthonyattard" target="_blank"><i class="social-header fa fa-github" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/attardanthony/" target="_blank"><i class="social-header fa fa-linkedin" aria-hidden="true"></i></a>
-            <div id="btn-resume"><a href="/resume" class="btn-rounded-white">Download Resume</a></div>
+            <h2>Optimize your business performance with AI.</h2>
         </div>
         <!-- End #lead-content -->
 
@@ -86,10 +108,11 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        Hi! I’m Anthony Attard. I am an entrepreneur and developer based in California.
-                        My interests and skills include software development, online marketing, finance, and anything that is an integral part of business success.
-                        I love entrepreneurship and the innovations that it creates. I enjoy building things that I can be proud of and take ownership in. I strive for constant improvement in myself, my knowledge, and my skill set.
-                        Besides tech, I also have a passion for guitar, fitness, and being in the ocean.
+                        Greetings! I am Anthony Attard, an AI business consultant and entrepreneur located in California. Me and my team specialize in
+                        transforming businesses through intelligent AI solutions. My areas of expertise encompass chatbots, sales bots, data
+                        optimization, and business efficiency tools. I have a strong entrepreneurial drive that fuels my passion for developing
+                        solutions that push the boundaries of business growth and efficiency. Outside the realm of tech, my interests include
+                        playing the guitar, fitness, and exploring the wonders of the ocean.
                     </p>
                 </div>
             </div>
@@ -101,44 +124,26 @@
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
             <div data-date="February 2017 – Present">
-                <h3>Attard Consulting</h3>
-                <h4>Software Developer</h4>
+                <h3>AAA Consulting</h3>
+                <h4>Founder/AI Business Consultant</h4>
                 <p>
-                    I develop software and create business solutions for a variety of clients. Some of the projects I have worked on involved membership sites, eCommerce solutions, on board software, and internal company systems. I have also designed databases in order to accommodate for unique use cases and business goals. Some of my favorite technologies to use are Angular, React, Mongo, MySQL, and more. I pride myself in providing top quality service and results.
+                    I offer bespoke AI solutions and business consulting services to a broad spectrum of clients, from startups to
+                    established enterprises. My projects encompass AI automation, sales bots, data optimizations, and developing advanced
+                    chatbot systems. I have engineered databases tailored to unique use cases and business objectives, utilizing
+                    technologies such as ChatGPT, Angular, React, Mongo, MySQL, and more. My focus is on delivering top-notch service and results
+                    that transform business operations and enhance growth.
                 </p>
             </div>
 
-            <div data-date="January 2018 – November 2018">
-                <h3>Thermo Fisher Scientific</h3>
-                <h4>Web Developer</h4>
+            <div data-date="November 2020 – Present">
+                <h3>Capital One</h3>
+                <h4>Senior Associate Software Engineer</h4>
                 <p>
-                    Thermo Fisher Scientific is the world leader in serving science. I was the lead developer on Web Request Central, a project management tool used by the Fortune 500 company. I moved the application to the cloud (AWS) to improve the server architecture, ensure reliability, and streamline development. Further I modernized the system by integrating JavaScript libraries into a legacy PHP codebase. This alongside building a myriad of features like file upload, user authentication, and a messaging system.
+                    Capital One is driven by the mission to change banking for good by bringing humanity, ingenuity and simplicity to
+                    banking. Develop Capital One's enterprise experimentation platform using Angular, Express, AWS, Node DynamoDB, Lambda, etc with
+                    reusability, readability, modularity, and extensibility in mind. Enable real-time, intelligent customer experiences through a bespoke platform that that provides the tools to connect with the appropriate customer via the optimal channels at the right time.
                 </p>
             </div>
-
-            <div data-date="February 2016 – February 2017">
-                <h3>Locbit</h3>
-                <h4>Software Engineer</h4>
-                <p>
-                    Locbit seamlessly connects IoT devices making data more accessible and usable allowing for smarter decisions. I worked on projects including 3D printer software written in Python, IoT software in partnership with Panasonic, creating network visualization maps with JavaScript, and improving loading speed of the platform website.
-                </p>
-            </div>
-
-            <div data-date="November 2014 – February 2016">
-                <h3>SmartProperty</h3>
-                <h4>Software Developer | Project Manager</h4>
-                <p>
-                    SmartProperty simplifies financial planning for real estate professionals. I developed full-stack applications using LAMP, PHP, MySQL, Git, jQuery, and JavaScript. I led the developer team with Scrum/Agile Software development to keep the team on schedule. I handled product testing, bug fixing, and quality assurance. I provided technical support and instruction to clients by phone and email. I recorded user communications using various CRM tools.
-                </p>
-            </div>
-
-            <div data-date="January 2013 – Nov 2014">
-                <h3>The Beast Brief</h3>
-                <h4>Software Developer | Marketing Analyst</h4>
-                <p>
-                    The Beast Brief is a digital media company covering sports from around the world. I created <a href="http://thebeastbrief.com/">thebeastbrief.com</a> and ensured that the site ran smoothly at all times. I guided marketing initiatives through website partnerships, and social media. I coordinated an international team of writers, editors, and marketers. I implemented SEO strategies and ran A/B tests, thus increasing web traffic.
-                </p>
-            </div>            
         </div>
     </div>
     <!-- End #experience -->
@@ -297,39 +302,31 @@
                 Courses covering the subject areas of Marketing, Management, Finance, Accounting, and more.
             </p>
         </div>
-        <!-- End .education-block -->
     </div>
     <!-- End #education -->
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
+            <li>AI</li>
             <li>JavaScript</li>
             <li>React</li>
             <li>Angular</li>
             <li>Vue</li>
-            <li>Redux</li>
             <li>AWS Certified Developer</li>
-            <li>jQuery</li>
             <li>UI/UX</li>
             <li>Node</li>
             <li>Ruby</li>
             <li>Bootstrap</li>
-            <li>Flask</li>
             <li>Python</li>
             <li>Cloud Servers</li>
             <li>TDD</li>
             <li>Full Stack</li>
             <li>SEM</li>
-            <li>Laravel</li>
-            <li>WordPress</li>
-            <li>Git</li>
-            <li>LAMP</li>
             <li>MEAN</li>
             <li>APIs</li>
             <li>Databases</li>
             <li>SQL</li>
-            <li>PHP</li>
             <li>Project Management</li>
             <li>Web Development</li>
             <li>eCommerce</li>
@@ -340,9 +337,6 @@
             <li>A/B Testing</li>
             <li>Gulp</li>
             <li>HTML5</li>
-            <li>CSS3</li>
-            <li>Sass</li>
-            <li>Shell</li>
             <li>OOP</li>
             <li>MVC</li>
             <li>Unix/Linux</li>
@@ -352,12 +346,16 @@
 
     <div id="contact">
         <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/hello@anthonyattard.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
+        <div id="contact-form-container">
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <label>Name</label>
+                <input type="text" name="user_name">
+                <label>Email</label>
+                <input type="email" name="user_email">
+                <label>Message</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send">
             </form>
         </div>
         <!-- End #contact-form -->
@@ -369,7 +367,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2019 Anthony Attard
+                        Copyright &copy; 2023 Anthony Attard
                     </p>
                 </div>
                 <div class="col-sm-2 top">
