@@ -357,9 +357,9 @@ footer {
 
 #lead {
     position: relative;
-    height: 100vh;
-    min-height: 500px;
-    max-height: 1080px;
+    height: 50vh;
+    min-height: 200px;
+    max-height: 500px;
     background: url(../images/lead-bg.jpg);
     background-size: cover;
     padding: 15px;
@@ -381,7 +381,7 @@ footer {
     h1 {
         color: #fff;
         font-weight: 900;
-        font-size: 5em;
+        font-size: 3em;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         line-height: 0.9em;
@@ -390,7 +390,7 @@ footer {
     h2 {
         color: lighten($base-color, 25%);
         font-weight: 500;
-        font-size: 2.25em;
+        font-size: 1.75em;
         margin-bottom: 15px;
     }
 }
@@ -772,7 +772,7 @@ footer {
     }
 }
 
-#contact-form {
+#contact-form-container {
     max-width: 500px;
     margin: 0 auto;
 
