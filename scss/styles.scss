@@ -817,6 +817,16 @@ footer {
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
         }
     }
+
+   .g-recaptcha {
+       display: flex;
+       justify-content: center;
+       /* Center items horizontally */
+       align-items: center;
+       /* Center items vertically */
+       height: 150px;
+       /* Set the desired height for the reCAPTCHA div */
+   }
 }
 
 /*
