@@ -452,6 +452,45 @@
             v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
         })(document, 'script');
     </script>
+    <script>
+        function sleep(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+
+        async function addFeatures(data) {
+            let element = document.querySelector(".vfrc-assistant-info--title");
+            while (!element) {
+                element = document.querySelector(".vfrc-assistant-info--title");
+                await sleep(200);
+            }
+            if (data.title) {
+                document.querySelector(".vfrc-header--title").innerText = data.title;
+                element.innerText = data.title;
+            }
+
+            if (data.image) {
+                document.querySelectorAll(".vfrc-avatar")[1].style.background = "url(" + data.image + ")";
+            }
+
+            document.querySelector(".vfrc-footer--watermark").innerHTML = "⚡ " + "Demo for " + data.weburl + " ⚡";
+        }
+        window.addEventListener("message", function (event) {
+            if (event.data.type == "features") {
+                addFeatures(event.data.jsonData);
+            }
+        });
+
+        async function sendWebsite() {
+            await sleep(1000);
+             return window.voiceflow.chat.interact({
+                type: "text",
+                payload: "https://anthonyattard.com"
+            })
+        }
+
+        sendWebsite();
+        window.parent.postMessage("loaded", "*");
+    </script>
 </body>
 
 </html>
