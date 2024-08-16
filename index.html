@@ -29,6 +29,8 @@
                 emailjs.sendForm('service_fhghkdd', 'template_6igouc8', this)
                     .then(function () {
                         console.log('SUCCESS!');
+                        document.getElementById('form-response').style.display = 'block';
+                        document.getElementById('contact-form').reset();
                     }, function (error) {
                         console.log('FAILED...', error);
                     });
@@ -422,6 +424,7 @@
                 <div class="g-recaptcha" data-sitekey="6Lcp9RQTAAAAAHGooN4GMq21jLqGK89AhEbf2U5x"></div>
                 <input type="submit" value="Send">
             </form>
+            <div id="form-response" style="display:none;">Thank you! Your message has been sent.</div>
         </div>
         <!-- End #contact-form -->
     </div>
