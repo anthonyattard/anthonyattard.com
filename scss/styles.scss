@@ -473,6 +473,15 @@ footer {
     }
 }
 
+#services {
+    padding: 50px 15px;
+    border-bottom: 1px solid $border;
+
+    h2 {
+        color: $heading;
+    }
+}
+
 /*
     --------------------------------
     ----- 6. Experience Styles -----
