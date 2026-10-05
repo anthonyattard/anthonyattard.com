@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: anthonyattard.com:latest
+    container_name: anthonyattard-web
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-80}:80"

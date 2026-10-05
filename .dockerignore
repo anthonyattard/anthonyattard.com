@@ -1,0 +1,15 @@
+.git
+.gitignore
+.htaccess
+.nvmrc
+.DS_Store
+**/.DS_Store
+node_modules
+scss
+gulpfile.js
+package.json
+package-lock.json
+Dockerfile
+docker-compose.yml
+README.md
+LICENSE.md
