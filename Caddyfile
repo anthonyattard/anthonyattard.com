@@ -1,0 +1,15 @@
+# TLS-terminating reverse proxy in front of the nginx container.
+# Caddy obtains and renews Let's Encrypt certificates automatically and
+# redirects HTTP to HTTPS. Set DOMAIN=localhost to test locally with
+# Caddy's internal CA instead of Let's Encrypt.
+
+{$DOMAIN:anthonyattard.com}, www.{$DOMAIN:anthonyattard.com} {
+	encode zstd gzip
+
+	# Enable once HTTPS is confirmed working; browsers cache this for a year.
+	# header Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+	# nginx handles the www -> non-www redirect using X-Forwarded-Proto,
+	# which Caddy sets automatically.
+	reverse_proxy web:80
+}

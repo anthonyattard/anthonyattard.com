@@ -4,5 +4,28 @@ services:
     image: anthonyattard.com:latest
     container_name: anthonyattard-web
     restart: unless-stopped
+    # Only reachable by Caddy on the compose network.
+    expose:
+      - "80"
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: anthonyattard-caddy
+    restart: unless-stopped
+    environment:
+      - DOMAIN=${DOMAIN:-anthonyattard.com}
     ports:
-      - "${HOST_PORT:-80}:80"
+      - "80:80"
+      - "443:443"
+      - "443:443/udp" # HTTP/3
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data # certificates; must persist to avoid Let's Encrypt rate limits
+      - caddy_config:/config
+    depends_on:
+      web:
+        condition: service_healthy
+
+volumes:
+  caddy_data:
+  caddy_config:
